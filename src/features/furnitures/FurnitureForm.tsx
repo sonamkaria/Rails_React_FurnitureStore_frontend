@@ -43,21 +43,23 @@ function resetState(){
         type = "text"
         className="form-control text-start"
         name="title"
+        placeholder="title"
         value={title}
         onChange={(e) => setTitle(e.target.value)} />
         <textarea
         className='form-control text-strart'
         name="body"
         value={body}
+        placeholder="body"
         onChange={(e)=> setBody(e.target.value)}
         />
-        {/* <input
+        <input
         type = "text"
         className="form-control text-start"
         name="image"
         placeholder="image"
         value={image}
-        onChange={(e) => setImage(e.target.value)} /> */}
+        onChange={(e) => setImage(e.target.value)} />
         <button
           type="submit"
           onClick={(e) => submitHandler(e)}>Submit</button>
