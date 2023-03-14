@@ -38,7 +38,7 @@ function Furnitures() {
             contents = <div>{status}</div>
         } else {
             contents = <div className="card">
-                <h3>{status}</h3>
+                
                 <FurnitureForm />
                 {furnitures && furnitures.length > 0 && furnitures.map(furniture => {
                     return <div key={furniture.id} style={{margin:"5em"}}>
@@ -58,7 +58,7 @@ function Furnitures() {
 
     return (
         <div>
-            <h1>Furniture Store</h1>
+            <h1>SK Designs</h1>
             {contents}
         </div>
     )
