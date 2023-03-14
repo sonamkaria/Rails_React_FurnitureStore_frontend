@@ -1,6 +1,6 @@
 import { FurnitureFormData, FurnituresState, FurnitureDeleteData } from "./furnitureSlice"
 
-const API_URL = "http://localhost:3000";
+const API_URL = "https://react-crud-furniturestore.onrender.com/furnitures";
 
 export async function fetchFurnitures() {
     return fetch(`${API_URL}/furnitures.json`, {
