@@ -13,7 +13,8 @@
 #### An admin account to add, update,delete user data
 
 ### App Screenshot
-#### ![banner](./images/furnitureStore_ss.png)
+#### ![banner](./images/top.png)
+#### ![banner](./images/bottom.png)
 
 ---
 
@@ -46,7 +47,7 @@
 ---
 
 ### Getting Started: 
-#### TRELLO BOARD: ![banner](./images/trello_rails.png)
+#### TRELLO BOARD: ![banner](./images/trello.png)
 
 ---
 
