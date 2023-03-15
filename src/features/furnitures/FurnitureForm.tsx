@@ -41,7 +41,6 @@ function resetState(){
 
   return (
     <div>
-      <h1>Furniture</h1>
       <form>
         <input
         type = "text"

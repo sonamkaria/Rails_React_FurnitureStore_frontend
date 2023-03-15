@@ -71,25 +71,8 @@ function Furniture(props:any) {
       <div className="col-8">
       {isEditing ? editableTitle : titleElement}
       </div>
-      <div className="col-4"></div>
-        <ButtonGroup
-        furniture_id={props.furniture.id}
-        dispatch={props.dispatch}
-        toggleEditForm={props.toggleEditForm} />
-
     </div>
 
-    <div className="row">
-      <div className="col-8">
-      {isEditing ? editableBody : bodyElement}
-      </div>
-    </div>
-    <div className='row'>
-      <div className="col-2">
-      {isEditing ? submitButton : ""}
-      </div>
-
-    </div>
     <div className="row">
       <div className="col-8">
       {isEditing ? editableImage : imageElement}
@@ -104,6 +87,19 @@ function Furniture(props:any) {
 
     <div className="row">
       <div className="col-8">
+      {isEditing ? editableBody : bodyElement}
+      </div>
+    </div>
+    <div className='row'>
+      <div className="col-2">
+      {isEditing ? submitButton : ""}
+      </div>
+
+    </div>
+
+
+    <div className="row">
+      <div className="col-8">
       {isEditing ? editableColor : colorElement}
       </div>
     </div>
@@ -113,6 +109,12 @@ function Furniture(props:any) {
       </div>
 
     </div>
+
+    <div className="col-4"></div>
+        <ButtonGroup
+        furniture_id={props.furniture.id}
+        dispatch={props.dispatch}
+        toggleEditForm={props.toggleEditForm} />
 
   </div>
   )
