@@ -58,7 +58,13 @@ function Furnitures() {
 
     return (
         <div>
-            <h1>SK Designs</h1>
+            <ul className="nav justify-content-center">
+  <li className="nav-item">
+    <a className="nav-link active" href="#">SK Designs</a>
+  </li>
+  </ul>
+
+            {/* <h1 className="display-1">SK Designs</h1> */}
             {contents}
         </div>
     )
