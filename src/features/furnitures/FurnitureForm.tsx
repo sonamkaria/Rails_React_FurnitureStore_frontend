@@ -11,6 +11,8 @@ function FurnitureForm() {
   const[body, setBody] = useState('')
   const[image, setImage] = useState('')
 
+  const[color, setColor] = useState('')
+
 
   function submitHandler(e:any){
     e.preventDefault();
@@ -18,7 +20,8 @@ function FurnitureForm() {
       furniture: {
         title:title,
         body:body,
-        image:image
+        image:image,
+        color:color,
 
       }
     }
@@ -31,7 +34,8 @@ function FurnitureForm() {
 function resetState(){
   setTitle('');
   setBody('');
-  setImage('')
+  setImage('');
+  setColor('')
 }
 
 
@@ -60,6 +64,17 @@ function resetState(){
         placeholder="image"
         value={image}
         onChange={(e) => setImage(e.target.value)} />
+
+
+<input
+        type = "text"
+        className="form-control text-start"
+        name="color"
+        placeholder="color"
+        value={color}
+        onChange={(e) => setColor(e.target.value)} />
+
+
         <button
           type="submit"
           onClick={(e) => submitHandler(e)}>Submit</button>

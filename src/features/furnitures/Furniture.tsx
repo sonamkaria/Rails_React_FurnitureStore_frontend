@@ -5,7 +5,9 @@ function Furniture(props:any) {
   const [title, setTitle] = useState(props.furniture.title);
   const [body, setBody] = useState(props.furniture.body);
   const [image, setImage] = useState(props.furniture.image);
+  const [color, setColor] = useState(props.furniture.color);
   const [isEditing, setIsEditing] = useState(props.furnitureToEdit === props.furniture.id);
+  
   
   useEffect(() => {
       setIsEditing(props.furnitureToEdit === props.furniture.id);
@@ -19,6 +21,7 @@ function Furniture(props:any) {
               title: title,
               body: body,
               image: image,
+              color: color,
           }
       }
       props.submitEdit(formData)
@@ -29,13 +32,14 @@ function Furniture(props:any) {
       setTitle(props.furniture.title);
       setBody(props.furniture.body);
       setImage(props.furniture.image)
+      setColor(props.furniture.color)
   }
 
   const titleElement = <h2 className="title text-start">{props.furniture.title}</h2>;
   const bodyElement = <p className="card-text text-start">{props.furniture.body}</p>;
   const imageElement = <img className="card-text text-start" src={props.furniture.image} alt="image" />;
+  const colorElement = <p className="card-text text-start">{props.furniture.color}</p>;
 
-  
   const editableTitle = <input 
                           type="text" 
                           className="form-control text-start" 
@@ -51,6 +55,11 @@ function Furniture(props:any) {
                           value={image}
                           onChange={(e) => setImage(e.target.value)} />;
 
+    
+  const editableColor = <textarea 
+                          className="form-control text-start"
+                          value={color}
+                          onChange={(e) => setColor(e.target.value)} />;
 
   const submitButton = <button
                           type="submit"
@@ -84,6 +93,18 @@ function Furniture(props:any) {
     <div className="row">
       <div className="col-8">
       {isEditing ? editableImage : imageElement}
+      </div>
+    </div>
+    <div className='row'>
+      <div className="col-2">
+      {isEditing ? submitButton : ""}
+      </div>
+
+    </div>
+
+    <div className="row">
+      <div className="col-8">
+      {isEditing ? editableColor : colorElement}
       </div>
     </div>
     <div className='row'>
