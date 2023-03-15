@@ -35,7 +35,9 @@ function Furniture(props:any) {
       setColor(props.furniture.color)
   }
 
-  const titleElement = <h2 className="title text-start">{props.furniture.title}</h2>;
+  // const titleElement = <h2 className="title text-start">{props.furniture.title}</h2>;
+
+  const titleElement = <a className="title text-start" href="{props.furniture.title}"></a>;
   const bodyElement = <p className="card-text text-start">{props.furniture.body}</p>;
   const imageElement = <img className="card-text text-start" src={props.furniture.image} alt="image" />;
   const colorElement = <p className="card-text text-start">{props.furniture.color}</p>;
