@@ -41,6 +41,8 @@
 #### 5. Trello
 #### 6. VS Code
 #### 7. Typescript
+#### 8. Bootstrap
+
 
 
 
