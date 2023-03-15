@@ -39,7 +39,7 @@ function Furniture(props:any) {
 
   // const titleElement = <a className="title text-start" href="{props.furniture.title}" />;
   const bodyElement = <p className="card-text text-start">{props.furniture.body}</p>;
-  const imageElement = <img className="card-text text-start" src={props.furniture.image} alt="image" />;
+  const imageElement = <img className="img-fluid" src={props.furniture.image} alt="image" />;
   const colorElement = <p className="card-text text-start">color: {props.furniture.color}</p>;
 
   const editableTitle = <input 
